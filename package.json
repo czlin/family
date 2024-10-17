@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp nodemon",
+    "dev": "gulp",
+    "build": "babel src -d dist",
+    "production": "node dist/app.js",
+    "test": "jest",
+    "link": "eslint .",
+    "link:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,7 @@
   "homepage": "https://github.com/czlin/family#readme",
   "dependencies": {
     "@sequelize/core": "^7.0.0-alpha.43",
+    "@sequelize/mysql": "^7.0.0-alpha.43",
     "koa": "^2.15.3",
     "koa-body": "^6.0.1",
     "koa-compose": "^4.1.0",

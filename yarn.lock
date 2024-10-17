@@ -1190,7 +1190,7 @@
   resolved "https://registry.yarnpkg.com/@rtsao/scc/-/scc-1.1.0.tgz#927dd2fae9bc3361403ac2c7a00c32ddce9ad7e8"
   integrity sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==
 
-"@sequelize/core@^7.0.0-alpha.43":
+"@sequelize/core@7.0.0-alpha.43", "@sequelize/core@^7.0.0-alpha.43":
   version "7.0.0-alpha.43"
   resolved "https://registry.yarnpkg.com/@sequelize/core/-/core-7.0.0-alpha.43.tgz#c07dffb55b5c23f392b2735795534e384951380f"
   integrity sha512-j3lZvUQPDNEb01kroSazprTHcQ1Y1t+LW6miKhmQ8O4+i7HY1WerO+co6TBcjunssTjJi+VyYXYlLQ0emc2k3w==
@@ -1213,6 +1213,18 @@
     type-fest "^4.14.0"
     uuid "^10.0.0"
     validator "^13.11.0"
+
+"@sequelize/mysql@^7.0.0-alpha.43":
+  version "7.0.0-alpha.43"
+  resolved "https://registry.yarnpkg.com/@sequelize/mysql/-/mysql-7.0.0-alpha.43.tgz#578567abc3cbfa71931c07fd10e776ec0c4450ef"
+  integrity sha512-68ca5Q13hGXcrkffZTnnUiGIq42ZY8rGIJk6kmbS7FhOTRzWYJndfZ915FF64Y0vcHrjzxukr7kInJ4v2ZbGYg==
+  dependencies:
+    "@sequelize/core" "7.0.0-alpha.43"
+    "@sequelize/utils" "7.0.0-alpha.43"
+    dayjs "^1.11.10"
+    lodash "^4.17.21"
+    mysql2 "^3.11.2"
+    wkx "^0.5.0"
 
 "@sequelize/utils@7.0.0-alpha.43":
   version "7.0.0-alpha.43"
@@ -5598,7 +5610,7 @@ mute-stream@0.0.8:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-mysql2@^3.11.3:
+mysql2@^3.11.2, mysql2@^3.11.3:
   version "3.11.3"
   resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-3.11.3.tgz#8291e6069a0784310846f6437b8527050dfc10c4"
   integrity sha512-Qpu2ADfbKzyLdwC/5d4W7+5Yz7yBzCU05YWt5npWzACST37wJsB23wgOSo00qi043urkiRwXtEvJc9UnuLX/MQ==
@@ -7927,6 +7939,13 @@ which@^2.0.1, which@^2.0.2:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+wkx@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/wkx/-/wkx-0.5.0.tgz#c6c37019acf40e517cc6b94657a25a3d4aa33e8c"
+  integrity sha512-Xng/d4Ichh8uN4l0FToV/258EjMGU9MGcA0HV2d9B/ZpZB3lqQm7nkOdZdm5GhKtLLhAE7PiVQwN4eN+2YJJUg==
+  dependencies:
+    "@types/node" "*"
 
 word-wrap@~1.2.3:
   version "1.2.5"

@@ -1,28 +1,23 @@
-import { Sequelize, DataTypes } from '@sequelize/core';
+import { Sequelize } from '@sequelize/core';
 import { DB } from '../config';
 
-const sequelize = new Sequelize(DB.database, DB.username, DB.password, {
+const sequelize = new Sequelize({
+  database: DB.database,
+  user: DB.username,
+  password: DB.password,
   host: DB.host,
+  port: DB.port,
   dialect: 'mysql'
 });
 
-const Score = sequelize.define('Score', {
-  // 在这里定义模型属性
-  firstName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  lastName: {
-    type: DataTypes.STRING
-    // allowNull 默认为 true
-  }
-}, {
-  // 这是其他模型参数
-});
-
 try {
-  await sequelize.authenticate();
-  console.log('Connection has been established successfully.');
+  sequelize.authenticate().then(() => {
+    console.log('Connection has been established successfully.');
+    require('./model');
+    
+  }).catch((error) => {
+    console.error('Unable to connect to the database:', error);  
+  });
 } catch (error) {
   console.error('Unable to connect to the database:', error);
 }
